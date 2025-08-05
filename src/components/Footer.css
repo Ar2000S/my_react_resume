@@ -1,0 +1,76 @@
+/* src/Footer.css */
+
+.footer-container {
+    display: flex;
+    justify-content: space-around; /* Distribute space between boxes */
+    padding: 20px;
+    background-color: #f0f0f0; /* Light background for visibility */
+    margin-top: 40px; /* Space above the footer */
+    flex-wrap: wrap; /* Allow boxes to wrap on smaller screens */
+}
+
+.footer-box {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    flex: 1; /* Allow boxes to grow and shrink */
+    min-width: 280px; /* Minimum width for boxes before wrapping */
+    max-width: 45%; /* Max width for two boxes per row */
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-box h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.footer-box label {
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+.footer-box input[type="email"],
+.footer-box textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Include padding in element's total width */
+}
+
+.footer-box textarea {
+    resize: vertical; /* Allow vertical resizing */
+    min-height: 100px;
+}
+
+.footer-box button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.footer-box button:hover {
+    background-color: #0056b3;
+}
+
+/* Optional: Add some basic responsiveness */
+@media (max-width: 600px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-box {
+        max-width: 90%; /* On small screens, take more width */
+    }
+}
